@@ -4,7 +4,7 @@
 
 Users of the [mini-core](https://github.com/alkanfel1987/pantheon-seed) send reports on how it works and skills for the shared core here. Anyone can submit, and only we make entries in `data/`, after review.
 
-Why: the core learns from the experience of everyone who trains the mini-core on their own machine. Reports show which skills really work and where they break. Submitted skills, after review, go out to all users in the next release. The full idea is in the [mini-core README](https://github.com/alkanfel1987/pantheon-seed/blob/main/README.en.md#why-this-exists).
+Why: the core learns from the experience of everyone who trains the mini-core on their own machine. Reports show which skills really work and where they break. Submitted skills, after review, go out to all users in the next release. The full idea is in the [mini-core README](https://github.com/alkanfel1987/pantheon-seed/blob/main/README.en.md#sound-familiar).
 
 ## How to submit
 
