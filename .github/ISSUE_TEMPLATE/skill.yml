@@ -1,5 +1,5 @@
-name: Навык для ядра
-description: Предложить новый навык или правку навыка миниядра
+name: Навык для ядра / Skill for the core
+description: Предложить новый навык или правку навыка миниядра / Propose a new skill or a change to a mini-core skill
 title: "Навык: "
 labels: ["навык", "в карантине"]
 body:
@@ -7,45 +7,47 @@ body:
     attributes:
       value: |
         Навык не сливается автоматически никогда. Он проходит испытание по уязвимости (текст / код / хуки — хуки не принимаются), карантинный фильтр 7+1, слепую проверку и решение человека. Подробно — CONTRIBUTING.md в pantheon-seed.
+
+        A skill is never merged automatically. It goes through a vulnerability test (text / code / hooks — hooks are not accepted), the 7+1 quarantine filter, a blind check and a human decision. Details are in CONTRIBUTING.en.md in pantheon-seed.
   - type: input
     id: link
     attributes:
-      label: Ссылка на папку навыка в вашем форке
+      label: Ссылка на папку навыка в вашем форке / Link to the skill folder in your fork
       placeholder: https://github.com/<вы>/pantheon-seed/tree/main/.claude/skills/<имя>
     validations:
       required: true
   - type: dropdown
     id: kind
     attributes:
-      label: Что это
+      label: Что это / What this is
       options:
-        - новый навык
-        - правка навыка миниядра
+        - новый навык / new skill
+        - правка навыка миниядра / change to a mini-core skill
     validations:
       required: true
   - type: textarea
     id: closes
     attributes:
-      label: Какую ошибку или задачу закрывает (одной фразой)
+      label: Какую ошибку или задачу закрывает (одной фразой) / What mistake or task it covers (one sentence)
     validations:
       required: true
   - type: textarea
     id: evidence
     attributes:
-      label: Откуда известно, что работает
-      description: Сколько раз применён, на чём, что было без него. Обезличьте — без имён, путей и данных ваших проектов.
+      label: Откуда известно, что работает / How you know it works
+      description: Сколько раз применён, на чём, что было без него. Обезличьте — без имён, путей и данных ваших проектов. / How many times it was applied, on what, what happened without it. Anonymize it, with no names, paths or data from your projects.
     validations:
       required: true
   - type: textarea
     id: falsifier
     attributes:
-      label: При каком исходе навык надо снять
+      label: При каком исходе навык надо снять / At what outcome the skill should be withdrawn
     validations:
       required: true
   - type: checkboxes
     id: consent
     attributes:
-      label: Согласие
+      label: Согласие / Consent
       options:
-        - label: Навык мой (или я вправе им делиться), и я согласен на его публикацию в ядре и миниядре под лицензией MIT.
+        - label: Навык мой (или я вправе им делиться), и я согласен на его публикацию в ядре и миниядре под лицензией MIT. / The skill is mine (or I am entitled to share it), and I agree to its publication in the core and the mini-core under the MIT license.
           required: true

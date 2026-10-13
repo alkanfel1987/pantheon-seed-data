@@ -1,5 +1,5 @@
-name: Отчёт о работе миниядра
-description: Сводные числа из рутины — какие навыки вызываются, что ломается, как идёт цикл обучения
+name: Отчёт о работе миниядра / Mini-core work report
+description: Сводные числа из рутины — какие навыки вызываются, что ломается, как идёт цикл обучения / Summary numbers from the routine — which skills are called, what breaks, how the learning cycle is going
 title: "Отчёт: "
 labels: ["отчёт", "в карантине"]
 body:
@@ -7,29 +7,31 @@ body:
     attributes:
       value: |
         **Всё, что вы отправите, сразу видно всем** — ещё до нашего разбора. Вставляйте только вывод `python scripts/routine.py report`: там одни сводные числа и имена навыков, без текстов, путей и содержимого ваших трейсов. Если заметили в отчёте что-то личное — удалите до отправки.
+
+        **Everything you submit is public at once** — before our review. Paste only the output of `python scripts/routine.py report`: it contains only summary numbers and skill names, with no texts, paths or contents of your session traces. If you notice anything personal in the report, remove it before sending.
   - type: input
     id: version
     attributes:
-      label: Версия миниядра
+      label: Версия миниядра / Mini-core version
       placeholder: v0.3.0
     validations:
       required: true
   - type: textarea
     id: report
     attributes:
-      label: Вывод routine.py report
+      label: Вывод routine.py report / Output of routine.py report
       render: text
     validations:
       required: true
   - type: textarea
     id: notes
     attributes:
-      label: Что работает, что нет (по желанию)
-      description: Своими словами, без личных данных и подробностей ваших проектов.
+      label: Что работает, что нет (по желанию) / What works, what does not (optional)
+      description: Своими словами, без личных данных и подробностей ваших проектов. / In your own words, without personal data or details of your projects.
   - type: checkboxes
     id: consent
     attributes:
-      label: Согласие
+      label: Согласие / Consent
       options:
-        - label: Я проверил, что в отчёте нет личных данных, и согласен, что числа из него будут опубликованы в data/ этого репозитория под CC0.
+        - label: Я проверил, что в отчёте нет личных данных, и согласен, что числа из него будут опубликованы в data/ этого репозитория под CC0. / I have checked that the report contains no personal data, and I agree that its numbers will be published in data/ of this repository under CC0.
           required: true
