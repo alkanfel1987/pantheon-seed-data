@@ -25,6 +25,28 @@ body:
         - правка навыка миниядра / change to a mini-core skill
     validations:
       required: true
+  - type: dropdown
+    id: spheres
+    attributes:
+      label: Сферы применения / Spheres of use
+      description: Где навык помогает. По этому полю он встанет в каталог (CATALOG.md). / Where the skill helps; this places it in the catalogue.
+      multiple: true
+      options:
+        - Исследования и аналитика / Research and analysis
+        - Разработка ПО / Software development
+        - Запуск продукта и бизнес / Product launch and business
+        - Право и документы / Law and documents
+        - Журналистика и проверка фактов / Journalism and fact-checking
+        - Тексты и контент / Writing and content
+        - Обучение и самообразование / Learning and self-education
+        - Инженерия и технические системы / Engineering and technical systems
+        - Здоровье и медицина (чтение исследований) / Health and medicine (reading research)
+        - История и гуманитарные исследования / History and humanities
+        - Решения и выбор / Decisions and choices
+        - Работа с ИИ-ассистентом / Working with an AI assistant
+        - другая — опишу ниже / other — described below
+    validations:
+      required: true
   - type: textarea
     id: closes
     attributes:
