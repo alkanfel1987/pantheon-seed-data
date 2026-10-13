@@ -1,0 +1,35 @@
+name: Отчёт о работе миниядра
+description: Сводные числа из рутины — какие навыки вызываются, что ломается, как идёт цикл обучения
+title: "Отчёт: "
+labels: ["отчёт", "в карантине"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Всё, что вы отправите, сразу видно всем** — ещё до нашего разбора. Вставляйте только вывод `python scripts/routine.py report`: там одни сводные числа и имена навыков, без текстов, путей и содержимого ваших трейсов. Если заметили в отчёте что-то личное — удалите до отправки.
+  - type: input
+    id: version
+    attributes:
+      label: Версия миниядра
+      placeholder: v0.3.0
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Вывод routine.py report
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Что работает, что нет (по желанию)
+      description: Своими словами, без личных данных и подробностей ваших проектов.
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Согласие
+      options:
+        - label: Я проверил, что в отчёте нет личных данных, и согласен, что числа из него будут опубликованы в data/ этого репозитория под CC0.
+          required: true

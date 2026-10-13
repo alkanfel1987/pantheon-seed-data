@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Само миниядро
+    url: https://github.com/alkanfel1987/pantheon-seed
+    about: Код, навыки, установка и CONTRIBUTING

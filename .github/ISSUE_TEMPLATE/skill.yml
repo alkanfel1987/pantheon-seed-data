@@ -1,0 +1,51 @@
+name: Навык для ядра
+description: Предложить новый навык или правку навыка миниядра
+title: "Навык: "
+labels: ["навык", "в карантине"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Навык не сливается автоматически никогда. Он проходит испытание по уязвимости (текст / код / хуки — хуки не принимаются), карантинный фильтр 7+1, слепую проверку и решение человека. Подробно — CONTRIBUTING.md в pantheon-seed.
+  - type: input
+    id: link
+    attributes:
+      label: Ссылка на папку навыка в вашем форке
+      placeholder: https://github.com/<вы>/pantheon-seed/tree/main/.claude/skills/<имя>
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Что это
+      options:
+        - новый навык
+        - правка навыка миниядра
+    validations:
+      required: true
+  - type: textarea
+    id: closes
+    attributes:
+      label: Какую ошибку или задачу закрывает (одной фразой)
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Откуда известно, что работает
+      description: Сколько раз применён, на чём, что было без него. Обезличьте — без имён, путей и данных ваших проектов.
+    validations:
+      required: true
+  - type: textarea
+    id: falsifier
+    attributes:
+      label: При каком исходе навык надо снять
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Согласие
+      options:
+        - label: Навык мой (или я вправе им делиться), и я согласен на его публикацию в ядре и миниядре под лицензией MIT.
+          required: true
