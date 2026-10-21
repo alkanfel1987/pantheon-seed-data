@@ -12,7 +12,7 @@ Why: the core learns from the experience of everyone who trains the mini-core on
 
 - **Work report** — the output of `python scripts/routine.py report` from your mini-core. It contains only summary numbers: which skills are called, what failed the integrity check, how the learning cycle is going.
 - **Skill for the core** — a link to the skill in your fork and three answers: what it covers, how you know it works, and at what outcome it should be withdrawn.
-- **Error summary** — the output of `python scripts/share_errors.py` from your mini-core: the skills version, the date, names of error classes from the shared dictionary and their counts; nothing else goes into it. A class is taken up for review once at least three different people have submitted it.
+- **Error summary** — the output of `python scripts/share_errors.py` from your mini-core: the skills version, the date, names of error classes from the shared dictionary and their counts per field of work (fields only from the fixed list in the mini-core's catalog); nothing else goes into it. A class is taken up for review once at least three different sources have submitted it: people, or fields of work of one person.
 
 ⚠ **What you submit is visible to everyone at once, before our review.** Do not paste the texts of your session traces, or the paths, names and data of your projects.
 

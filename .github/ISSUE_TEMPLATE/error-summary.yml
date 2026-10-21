@@ -1,24 +1,24 @@
 name: Сводка ошибок / Error summary
-description: Обезличенная сводка из python scripts/share_errors.py — только названия классов ошибок из общего словаря и числа / Anonymous summary from python scripts/share_errors.py — only names of error classes from the shared dictionary and counts
+description: Обезличенная сводка из python scripts/share_errors.py — только названия классов ошибок из общего словаря, сферы работы из фиксированного списка и числа / Anonymous summary from python scripts/share_errors.py — only names of error classes from the shared dictionary, fields of work from a fixed list, and counts
 title: "Сводка ошибок: "
 labels: ["сводка ошибок", "в карантине"]
 body:
   - type: markdown
     attributes:
       value: |
-        **Всё, что вы отправите, сразу видно всем** — вместе с вашим логином GitHub. Вставляйте только вывод `python scripts/share_errors.py`: там версия навыков, дата, названия классов ошибок из общего словаря, их счёт и строка «прочие: N» — без текстов трейсов, путей, имён и названий проектов. Если заметили в сводке что-то личное — удалите до отправки.
+        **Всё, что вы отправите, сразу видно всем** — вместе с вашим логином GitHub. Вставляйте только вывод `python scripts/share_errors.py`: там версия навыков, дата, названия классов ошибок из общего словаря, их счёт по сферам работы (строки вида «класс @ сфера: N»; сферы — только из фиксированного списка каталога миниядра, остальное — «прочая» или «не указана») и строка «прочие: N» — без текстов трейсов, путей, имён и названий проектов. Если заметили в сводке что-то личное — удалите до отправки.
 
-        Класс попадает в разбор, только когда его принесли не меньше трёх разных людей. Сводки ничего не меняют сами: это сигнал, что класс стоит разобрать.
+        Класс попадает в разбор, только когда его принесли не меньше трёх разных источников: людей или сфер работы одного человека. Сводки ничего не меняют сами: это сигнал, что класс стоит разобрать.
 
-        **Everything you submit is public at once**, together with your GitHub login. Paste only the output of `python scripts/share_errors.py`: the skills version, the date, names of error classes from the shared dictionary, their counts and a line "прочие: N" ("other: N") — with no trace texts, paths, names or project names. If you notice anything personal, remove it before sending.
+        **Everything you submit is public at once**, together with your GitHub login. Paste only the output of `python scripts/share_errors.py`: the skills version, the date, names of error classes from the shared dictionary, their counts per field of work (lines like "class @ sphere: N"; fields only from the fixed list in the mini-core's catalog, anything else is "прочая" or "не указана") and a line "прочие: N" ("other: N") — with no trace texts, paths, names or project names. If you notice anything personal, remove it before sending.
 
-        A class is taken up for review only when at least three different people have submitted it. Summaries change nothing by themselves; they are a signal that a class is worth examining.
+        A class is taken up for review only when at least three different sources have submitted it: people, or fields of work of one person. Summaries change nothing by themselves; they are a signal that a class is worth examining.
   - type: input
     id: version
     attributes:
       label: Версия навыков / Skills version
       description: Строка «версия навыков» из сводки / The "версия навыков" line of the summary
-      placeholder: v0.5.1
+      placeholder: v0.6.1
     validations:
       required: true
   - type: textarea
@@ -34,5 +34,5 @@ body:
     attributes:
       label: Согласие / Consent
       options:
-        - label: Я проверил, что в сводке нет личных данных (только названия классов из словаря и числа), и согласен, что числа из неё будут учтены в общем подсчёте и опубликованы в обобщённом виде под CC0. / I have checked that the summary contains no personal data (only class names from the dictionary and counts), and I agree that its numbers will be counted in the overall tally and published in aggregated form under CC0.
+        - label: Я проверил, что в сводке нет личных данных (только названия классов из словаря, сферы из фиксированного списка и числа), и согласен, что числа из неё будут учтены в общем подсчёте и опубликованы в обобщённом виде под CC0. / I have checked that the summary contains no personal data (only class names from the dictionary, fields of work from the fixed list, and counts), and I agree that its numbers will be counted in the overall tally and published in aggregated form under CC0.
           required: true
